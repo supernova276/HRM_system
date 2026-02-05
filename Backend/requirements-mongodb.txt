@@ -1,0 +1,22 @@
+# Requirements for MongoDB Support (Optional)
+# ================================================
+# WARNING: djongo has dependency conflicts with Django 5.0.1
+# Only use this if you specifically need MongoDB support
+# 
+# Installation steps:
+# 1. Install base requirements first: pip install -r requirements.txt
+# 2. Then install MongoDB support: pip install -r requirements-mongodb.txt
+#
+# OR use Django 4.2 LTS instead of 5.0.1 for better djongo compatibility:
+# pip install Django==4.2.0 djongo pymongo==3.12.3
+#
+# Note: For this HRM system, we recommend PostgreSQL or SQLite instead.
+
+# For Django 4.2 LTS (better compatibility):
+# Django==4.2.0
+# djongo==1.3.6
+# pymongo==3.12.3
+
+# For newer versions (may require djongo fork):
+# pip install git+https://github.com/doableware/djongo.git
+# pymongo>=4.0,<5.0
