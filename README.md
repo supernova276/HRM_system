@@ -27,6 +27,7 @@ React 18.2.0 , Css for styling, axios 1.6.0 for AJAX calls
 ### `clone the repository`
 
 git clone https://github.com/supernova276/HRM_system.git
+
 cd frontend
 
 ### `install dependencies`
@@ -44,7 +45,7 @@ http://localhost:3000
 
 # To run backend locally
 
-### `enter the backend in the same cloned repository given above`
+### `enter the backend directory in the same cloned repository given above`
 
 ### `Create and activate a virtual environment:`
 
