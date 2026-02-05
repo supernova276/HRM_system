@@ -119,7 +119,7 @@ export const attendanceAPI = {
   getByDate: async (date) => {
     try {
       const params = date ? { date } : {};
-      const response = await api.get('/attendance/by-date/', { params });
+      const response = await api.get('/attendance/by_date/', { params });
       return response.data;
     } catch (error) {
       throw error.response?.data || error;
@@ -129,7 +129,7 @@ export const attendanceAPI = {
   // Get employee attendance history
   getByEmployee: async (employeeId) => {
     try {
-      const response = await api.get('/attendance/by-employee/', {
+      const response = await api.get('/attendance/by_employee/', {
         params: { employee_id: employeeId },
       });
       return response.data;

@@ -2,6 +2,34 @@
   animation: fadeIn 0.4s ease;
 }
 
+/* Notification Styles */
+.notification {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  animation: slideIn 0.3s ease;
+  box-shadow: var(--shadow-md);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.notification-success {
+  background: linear-gradient(135deg, var(--success-light), #D1FAE5);
+  color: var(--success);
+  border-left: 4px solid var(--success);
+}
+
+.notification-error {
+  background: linear-gradient(135deg, var(--error-light), #FEE2E2);
+  color: var(--error);
+  border-left: 4px solid var(--error);
+}
+
+/* Legacy support */
 .success-message {
   background: linear-gradient(135deg, var(--success-light), #D1FAE5);
   color: var(--success);
@@ -15,6 +43,13 @@
   animation: slideIn 0.3s ease;
   box-shadow: var(--shadow-md);
   font-weight: 500;
+}
+
+.success-message.error-message,
+.error-message {
+  background: linear-gradient(135deg, var(--error-light), #FEE2E2);
+  color: var(--error);
+  border-left: 4px solid var(--error);
 }
 
 .attendance-header {
