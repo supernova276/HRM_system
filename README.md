@@ -1,4 +1,4 @@
-# HRM Backend API
+# HRM Project
 
 A comprehensive Django REST API backend and React for the Human Resource Management (HRM) system.
 
