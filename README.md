@@ -73,7 +73,3 @@ python manage.py runserver
 python manage.py createsuperuser
 
 
-## Limitations
-not connected to postgres or mongodb, using sqlite only
-
-
