@@ -10,7 +10,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='django-insecure-development-key-change-me')
+SECRET_KEY = config('SECRET_KEY',default="abc")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -65,6 +65,8 @@ WSGI_APPLICATION = 'hrm_backend.wsgi.application'
 # Database configuration
 DB_ENGINE = config('DB_ENGINE', default='sqlite')
 
+print(DB_ENGINE)
+
 if DB_ENGINE == 'postgresql':
     DATABASES = {
         'default': {
@@ -74,22 +76,6 @@ if DB_ENGINE == 'postgresql':
             'PASSWORD': config('DB_PASSWORD', default=''),
             'HOST': config('DB_HOST', default='localhost'),
             'PORT': config('DB_PORT', default='5432'),
-        }
-    }
-elif DB_ENGINE == 'mongodb':
-    # WARNING: MongoDB support via djongo has dependency conflicts with Django 5.0+
-    # We recommend using PostgreSQL or SQLite instead.
-    # If you must use MongoDB, see INSTALLATION_TROUBLESHOOTING.md
-    DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'NAME': config('MONGO_DB_NAME', default='hrm_db'),
-            'CLIENT': {
-                'host': config('MONGO_HOST', default='localhost'),
-                'port': int(config('MONGO_PORT', default=27017)),
-                'username': config('MONGO_USER', default=''),
-                'password': config('MONGO_PASSWORD', default=''),
-            }
         }
     }
 else:
@@ -123,7 +109,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 

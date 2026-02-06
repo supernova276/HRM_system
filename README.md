@@ -50,6 +50,7 @@ http://localhost:3000
 ### `Create and activate a virtual environment:`
 
 python -m venv venv
+
 venv\Scripts\activate 
 
 ### `Install backend dependencies:`
