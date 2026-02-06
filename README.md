@@ -10,7 +10,7 @@ React 18.2.0 , Css for styling, axios 1.6.0 for AJAX calls
 
 - **Framework**: Django 5.0.1
 - **API**: Django REST Framework 3.14.0
-- **Database**: PostgreSQL / MongoDB / SQLite
+- **Database**: PostgreSQL and SQLite(localy)
 - **CORS**: django-cors-headers
 
 ## Prerequisites
